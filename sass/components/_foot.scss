@@ -1,0 +1,90 @@
+@import '../utils/variables';
+.foot{
+    background-color: getCol('background');
+    &__box{
+        background-color: var(--color-bg1);
+        padding-top: 200px;
+        padding-bottom: 200px;
+        text-decoration: none;
+        color: getCol('font-color-second');
+        font-size: 14px;
+        line-height: 1.714;
+        padding-top: 60px;
+        padding-bottom: 60px;
+       
+    }
+    &__grid{
+        text-align: center;
+        margin-bottom: 60px;
+    }
+    &__text{
+        text-decoration: none;
+        color: getCol('font-color-second');
+        font-size: 14px;
+        line-height: 1.714;
+    }
+    &__text:hover,
+    &__text:focus{
+        color: getCol('accent');
+        fill: getCol('accent');
+        cursor: pointer;
+        transition-duration:  250ms;
+        transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+    }
+    &__address{
+        padding-top: 20px;
+    }
+    &__join{
+        color: getCol('font-color-second');
+        font-weight: 700;
+        font-size: 14px;
+        margin-bottom: 20px;
+        text-align: center;
+    } 
+    &__social{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 60px;
+    }
+    &__social-icon{
+        fill: getCol('font-color-second');
+        border-radius: 50%;
+        margin-right: 10px;
+        background-color: rgba(255, 255, 255, 0.1) ;
+    }
+    &__social-icon:hover{
+        transition-property: fill(getCol('font-color-second'));
+        transition-duration:  250ms;
+        transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+        cursor: pointer;
+        background-color: getCol('accent');
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .foot{
+        &__main-box{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    .foot{
+        &__box{
+            display: flex;
+            justify-content: space-around;
+        }
+        &__main-box{
+            display: flex;
+        }
+        &__social{
+            display: flex;
+            justify-content: space-around;
+        }
+        &__grid{
+            margin-right: 70px;
+            text-align: left;
+        }
+    }
+}

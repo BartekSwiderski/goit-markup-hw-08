@@ -1,0 +1,28 @@
+@import '../utils/variables';
+.mobile-menu{
+    padding-top: 16px;
+    height: 60px;
+    &__grid{
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-between;
+    }
+    &__icon{
+
+        fill: getCol('font-color-forth');
+    }
+    &__icon:hover,
+    &__icon:active{
+        fill: getCol('accent');
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .mobile-menu{
+        display: none;
+    }
+}
+@media screen and (min-width: 1200px){
+    .mobile-menu{
+        display: none;
+    }
+}

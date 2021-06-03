@@ -1,0 +1,207 @@
+@import '../utils/variables';
+
+.header{
+    display: none;
+}
+
+    @media screen and (min-width: 768px) and (max-width: 1200px){
+        .header{
+            display:flex;
+            list-style: none;
+            text-decoration: none ;
+            align-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid getCol('border');
+            font-family: getFont('font-primary'), sans-serif;
+                &__nav{
+                    display:flex;
+                    align-items: center;
+                }
+                &__link{
+                    color: getCol('font-color-third');
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.172;
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline;
+                    margin-right: 46px;
+                    &--down{
+                        padding-top: 17px;
+                    }
+                }
+                &__link::after{
+                    content:"";
+                    width: 53px;
+                    height: 4px;
+                    background-color: getCol('accent');
+                    display: block;
+                    margin-right: 46px;
+                    position: relative;
+                    top: 18px;
+                    border-radius: 4px;
+                    opacity: 0;
+                    transition-duration:  250ms;
+                    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+                }
+                &__link:active::after,
+                &__link:hover::after,
+                &__link:focus::after{
+                    opacity: 1;
+                }
+                &__link-mail:focus,
+                &__link-mail:hover,
+                &__link-tel:focus,
+                &__link-tel:hover,
+                &__link:focus,
+                &__link:hover{
+                    color: getCol('accent');
+                    fill: getCol('accent');
+                    cursor: pointer;
+                    transition-duration:  250ms;
+                    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+                }
+                &__link--last{
+                    margin-right: 25px;
+                }
+                &__link-mail{
+                    color: getCol('font-color-third');
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 1.172;
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline;
+                    margin-left: auto;
+                    margin-right: 50px;
+                }
+                &__link-tel{
+                    color: getCol('font-color-third');
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 1.172;
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline;
+                    margin-top: 15px;
+                }
+                &__icon{
+                    margin-right: 10px;
+                }     
+                &--grid{
+            display:flex;
+            align-content:space-around;
+            align-items: center;
+            width: 1200px;
+            height: 57px;
+            padding: 0 15px;
+            margin: 0 auto;
+                }
+            }
+    }
+    @media screen and (min-width: 1200px){
+        .header{
+            display:flex;
+            list-style: none;
+            text-decoration: none ;
+            align-content: space-between;
+            align-items: center;
+            height: 80px;   
+            border-bottom: 1px solid getCol('border');
+            font-family: getFont('font-primary'), sans-serif;
+                &__nav{
+                    display:flex;
+                    align-items: center;
+                }
+                &__link{
+                    color: getCol('font-color-third');
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.172;
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline;
+                    margin-right: 46px;
+                    &--down{
+                        padding-top: 17px;
+                    }
+                }
+                &__link::after{
+                    content:"";
+                    width: 53px;
+                    height: 4px;
+                    background-color: getCol('accent');
+                    display: block;
+                    margin-right: 46px;
+                    position: relative;
+                    top: 18px;
+                    border-radius: 4px;
+                    opacity: 0;
+                    transition-duration:  250ms;
+                    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+                }
+                &__link:active::after,
+                &__link:hover::after,
+                &__link:focus::after{
+                    opacity: 1;
+                }
+                &__link-mail:focus,
+                &__link-mail:hover,
+                &__link-tel:focus,
+                &__link-tel:hover,
+                &__link:focus,
+                &__link:hover{
+                    color: getCol('accent');
+                    fill: getCol('accent');
+                    cursor: pointer;
+                    transition-duration:  250ms;
+                    transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+                }
+                &__link--last{
+                    margin-right: 200px;
+                }
+                &__link-nav
+                {
+                    display: flex
+                }
+                &__link-mail{
+                    color: getCol('font-color-third');
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.172;
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline;
+                    margin-left: auto;
+                    margin-right: 50px;
+                    padding-left: 15px;
+                }
+                &__link-tel{
+                    color: getCol('font-color-third');
+                    text-decoration: none;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 1.172;
+                    cursor: pointer;
+                    list-style: none;
+                    display: inline;
+                }
+                &__icon{
+                    margin-right: 10px;
+                }     
+                &--grid{
+            display:flex;
+            align-content:space-around;
+            align-items: center;
+            width: 1200px;
+            height: 57px;
+            padding: 0 15px;
+            margin: 0 auto;
+                }
+            }
+    }

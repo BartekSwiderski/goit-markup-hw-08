@@ -1,0 +1,20 @@
+@import '../utils/variables';
+.logo{
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.174;
+    font-family: getFont('font-secondary'), sans-serif;
+        &--dark{
+        color: getCol('font-color-third');
+        margin-right: 93px;
+        @extend .logo;
+        }
+        &--light{
+        color: getCol('font-color-second');
+        @extend .logo;
+        }
+        &__span{
+        color: getCol('accent');
+        }
+}

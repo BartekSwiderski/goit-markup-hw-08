@@ -1,0 +1,60 @@
+@import '../utils/variables';
+.about{
+display: flex;
+flex-wrap: wrap;
+align-items: center;
+&__grid{
+    padding-left: 15px;
+}
+&__text-prim{
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.143;
+        padding-bottom: 10px;
+        padding-top: 30px;
+    }
+    &__text-sec{
+        color: getCol('font-color-first');
+        font-size: 14px;
+        line-height: 1.714;
+        max-width: 450px;
+        margin-bottom: 30px;
+    }
+    &__icon{
+        width: 450px;
+        background-color: #F5F4FA;
+}
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .about{
+        &__icon{
+            width: 354px;
+            background-color: #F5F4FA;
+        
+        }
+        &__grid:nth-child(odd)
+        {
+            margin-right: 30px;
+        }
+        &__text-sec{
+            max-width: 354px;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+.about{
+    display: flex;
+    flex-wrap: nowrap;
+    &__grid:not(:last-child){
+        margin-right: 30px;
+    }
+    &__icon{
+        width: 270px;
+    }
+    &__text-sec{
+        max-width: 270px;
+        margin-bottom: 0px;
+    }
+    }
+
+}

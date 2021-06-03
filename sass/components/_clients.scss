@@ -1,0 +1,53 @@
+@import '../utils/variables';
+.clients{
+    text-align: center;
+    padding-bottom: 30px;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.172;
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        }
+    &__icon{
+        border: 1px solid getCol('svg-border');
+        fill: getCol('svg-border');
+        width: 210px;
+        height:  92px;
+        margin-bottom: 30px;
+    }
+    &__icon:nth-child(odd){
+        margin-right: 30px;
+    }
+    &__icon:hover{
+        fill: getCol('accent');
+        transition-duration:  250ms;
+        transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+        border: 1px solid getCol('accent');
+        cursor: pointer;
+    } 
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .clients{
+        &__icon{
+            width: 226px;
+        height:  92px;
+        }
+        &__icon:nth-child(even){
+            margin-right: 30px;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    .clients{
+        padding-bottom: 50px;
+        font-size: 36px;
+        &__icon{
+            width: 170px;
+        height:  92px;
+        }
+        &__icon{
+            margin-bottom: 0px;
+        }
+    }
+}

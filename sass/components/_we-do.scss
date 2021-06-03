@@ -1,0 +1,49 @@
+@import '../utils/variables';
+.we-do{
+    &__hidden{
+    display: none;
+    }
+}
+@media screen and (min-width: 1200px){
+    
+.we-do{
+    &__hidden{
+        display: block;
+    }
+    &__head{
+    text-align: center;
+    padding-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.172;
+    }
+    &__grid{
+        display: flex;
+    }
+    &__img{
+        position: relative;
+    }
+    &__img:not(:last-child){
+        margin-right: 30px;
+    }
+    &__box{
+        position: absolute;
+        bottom: 4.5px;
+        width: 370px;
+        height: 70px;
+        background-color:  rgba(47, 48, 58, 0.8);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+    }
+    &__text{
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        position: absolute;
+        color: getCol('font-color-second');
+    }
+}
+
+}

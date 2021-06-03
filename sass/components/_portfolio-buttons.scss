@@ -1,0 +1,51 @@
+@import '../utils/variables';
+.portfolio-buttons{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    padding-bottom: 20px;
+    padding-top:100px;
+    &__btn{
+        margin-right: 8px;
+        background-color: getCol('background-sec');
+        color: getCol('font-color-forth');
+        cursor: pointer;
+        transition-duration:  250ms;
+        transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+        padding-left: 38px;
+        padding-right: 38px;
+        border-radius: 4px;
+        padding-top: 6px;
+        padding-bottom: 6px;
+        border: none;
+        font-family: getFont('font-primary'), sans-serif;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    &__btn:focus,
+    &__btn:hover{
+        background-color: getCol('accent');
+        color: getCol('font-color-second');
+        cursor: pointer;
+        transition-duration:  250ms;
+        transition-timing-function: cubic-bezier(0.39, 1.03, 0.82, 0.08);
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1200px){
+    .portfolio-buttons{
+        justify-content: center;
+        flex-wrap: nowrap;
+        &__btn{
+            margin-bottom: 0px;
+        }
+    }
+}
+@media screen and (min-width: 1200px){
+    .portfolio-buttons{
+        justify-content: center;
+        &__btn{
+        padding-left: 22px;
+        padding-right: 22px;
+        }
+    }
+}

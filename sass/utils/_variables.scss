@@ -1,0 +1,24 @@
+$colors:(
+    'background': #2F303A,   /* bg1 */
+    'background-sec': #F5F4FA, /* bg2*/
+    'font-color-first': #757575,  /* font2 */
+    'font-color-second': #ffffff, /*font3 */
+    'font-color-third': #212121,  /* font4  */
+    'font-color-forth': #000000, /*bg3 */
+    'accent': #2196f3,  /*font1 */
+    'border': #ececec,
+    'svg-border': #AFB1B8,
+);
+
+@function getCol($key) {
+    @return map-get($colors, $key);
+}
+
+$font: (
+    'font-primary': 'Roboto',
+    'font-secondary': 'Raleway',
+);
+
+@function getFont($key) {
+    @return map-get($font, $key);
+}
